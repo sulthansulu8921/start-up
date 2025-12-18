@@ -1,0 +1,50 @@
+/* Main admin wrapper */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f4f7;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: white;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Title */
+.admin-title {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Navigation links */
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-link {
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.admin-link:hover {
+  background: #1e293b;
+  color: #fff;
+}
+
+/* Main content area */
+.admin-main {
+  flex: 1;
+  padding: 30px;
+}
