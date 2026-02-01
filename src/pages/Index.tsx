@@ -73,70 +73,70 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-     
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-  {/* Background */}
-  <div className="absolute inset-0 z-0">
-    <img
-      src={bg1}
-      alt="Hero Background"
-      className="w-full h-full object-cover opacity-50"
-    />
-    <div className="absolute inset-0 tech-grid-bg opacity-40" />
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
-  </div>
 
-  {/* Content */}
-  <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-    <div className="animate-fade-in">
-      
-      {/* Badge */}
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
-        <Sparkles className="w-4 h-4 text-primary" />
-        <span className="text-sm text-primary font-medium">
-          India's Next-Gen IT Platform
-        </span>
-      </div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={bg1}
+            alt="Hero Background"
+            className="w-full h-full object-cover opacity-50"
+          />
+          <div className="absolute inset-0 tech-grid-bg opacity-40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+        </div>
 
-      {/* Heading */}
-      <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-        Build Fast. Build Smart.
-        <br />
-        <span className="gradient-text">Build With InvoTech.</span>
-      </h1>
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+          <div className="animate-fade-in">
 
-      {/* Subtitle */}
-      <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
-        India's next-gen IT partner connecting skilled developers with growing
-        businesses.
-      </p>
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-sm text-primary font-medium">
+                India's Next-Gen IT Platform
+              </span>
+            </div>
 
-      {/* Buttons */}
+            {/* Heading */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+              Build Fast. Build Smart.
+              <br />
+              <span className="gradient-text">Build With InvoTech.</span>
+            </h1>
 
-       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/developer-register">
-              <Button size="lg" className="gradient-hero text-white shadow-large w-full sm:w-auto">
-                Join as Developer
-                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            <Link to="/client-register">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                Hire Developers
-              </Button>
-            </Link>
-            <Link to="/auth">
-              <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                Login
-              </Button>
-            </Link>
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
+              India's next-gen IT partner connecting skilled developers with growing
+              businesses.
+            </p>
+
+            {/* Buttons */}
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/auth/login">
+                <Button size="lg" className="gradient-hero text-white shadow-large w-full sm:w-auto">
+                  Join as Developer
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link to="/auth/register/client">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                  Hire Developers
+                </Button>
+              </Link>
+              <Link to="/auth/login">
+                <Button size="lg" variant="secondary" className="w-full sm:w-auto">
+                  Login
+                </Button>
+              </Link>
+            </div>
           </div>
-    </div>
-  </div>
+        </div>
 
-  {/* Bottom Fade */}
-  <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-5" />
-</section>
+        {/* Bottom Fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-5" />
+      </section>
 
 
       {/* Services Section */}
@@ -148,7 +148,7 @@ const Index = () => {
               Comprehensive solutions tailored to your business needs
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div key={index} className="animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
@@ -168,7 +168,7 @@ const Index = () => {
               Talented professionals ready to bring your projects to life
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sampleDevelopers.map((developer, index) => (
               <div key={index} className="animate-slide-up" style={{ animationDelay: `${index * 150}ms` }}>
@@ -176,9 +176,9 @@ const Index = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
-            <Link to="/developer-register">
+            <Link to="/auth/login">
               <Button size="lg" variant="outline">
                 View All Developers
               </Button>
@@ -197,12 +197,12 @@ const Index = () => {
             Join thousands of developers and clients building amazing projects together
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/client-register">
+            <Link to="/auth/register/client">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto">
                 Post a Project
               </Button>
             </Link>
-            <Link to="/developer-register">
+            <Link to="/auth/login">
               <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto">
                 Find Work
               </Button>
